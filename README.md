@@ -1,9 +1,5 @@
 # Portfolio-Website
 Name: Nnamdi Ajoku
-SID:  1685228
-CCID: najoku
-CMPUT 275, Winter 2022
-
 Personal Project: Portfolio-Website
 ----------------------------------------------
 
