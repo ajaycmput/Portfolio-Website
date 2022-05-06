@@ -255,7 +255,6 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
-    border-radius: 30%;
 }
 @media (min-width: 600px) {
     .intro {
