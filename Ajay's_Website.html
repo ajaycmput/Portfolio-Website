@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html alng = "en">
+    <head> 
+        <meta charset ="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <title>Nnamdi's Portfolio Website</title>
+        <link rel = "stylesheet"
+        href = "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel = "stylesheet"
+        href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin = "anonymous" />
+
+            <!-- Use your own fonts ajay-->
+            <link href ="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans
+            +Pro:300,900&display=swap" rel = "stylesheet">
+
+            <!--Linking my html webpage to css-->
+            <link rel ="stylesheet" href = "css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <!--Logo is basically a section that only takes the profile pic.-->
+            <div class = "logo">
+                <!---Insert pic here!-->
+                <img src = "" alt = "" > <!--insert pic if you want ajay-->
+            </div>
+            <button class ="nav-toggle" aria-label = "toggle navigation">
+                <span class = "hamburger"></span>
+            </button>
+            <nav class = "nav">
+                <ul class = "nav__list">
+                    <li class = "nav__item"><a href = "#home" class = "nav__link">Home</a></li>
+                    <li class = "nav__item"><a href = "#services" class = "nav__link">My Services</a></li>
+                    <li class = "nav__item"><a href = "#about" class = "nav__link">About me</a></li>
+                    <li class = "nav__item"><a href = "#work" class = "nav__link">My Work</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!--Introduction-->
+        <section class = "intro" id="home">
+            <h1 class = "section__title section__title--intro">
+                Hi, I am <strong>Nnamdi Ajoku</strong>
+            </h1>
+            <p class = "section__subtitle section__subtitle--intro">Software Engineering student</p>
+            <img src = "port-folio.image/Profile1.jpg" alt = ""  class ="intro__img">
+        </section>
+
+        <!--My Services-->
+        <section class ="my-services" id = "services">
+            <h2 class = "section__title section__title--services"><strong> What I do</strong></h2>
+            <div class ="services">
+                <div class = "service">
+                    <h3> Software Design </h3>
+                    <p> As a software enginering student, I write source code to program computers for
+                        specific tasks like merging databases, routing communications and conducting
+                        researches. I do this through powerful programming languages such as c++ or Java.
+                    </p>
+                </div> <!--close service-->
+
+                <div class = "service">
+                    <h3 > Web Development</h3>
+                    <p>Building websites and making sure they function properly for great user experience
+                        is a pivotal role I play. This includes the client facing side of the web development.
+                        I am aided by languages such as HTML, CSS, React, Bootstrap and javascript.
+                    </p>
+                </div> <!--close service-->
+
+                <div class = "service">
+                    <h3 > Cloud Computing</h3>
+                    <p> By delivering services throught the internet such as servers, databases and wide range
+                        of softwares, I am able to provide public and private services (at a lower fee) on a
+                        network to specific clients.
+                    </p>
+                </div> <!--close service-->
+                 
+            </div> <!--close services-->
+            <a href = "#work" class = "btn"> see my work</a>
+        </section>
+
+        <!--About Me-->
+        <section class ="about-me" id ="about">
+            <h2 class = "section__title section__title--about"> <strong>Who I am </strong></h2>
+            <p class = "sectioon__subtitle section__subtitle--about"> Software Engineering Student</p>
+
+            <div class ="about-me__body">
+                <p>My name is Nnamdi Ajoku Israel. I was born in Nigeria and moved over to Canada to further
+                    my studies in the ever growing technological field. I am a software engineering student currently
+                    studying at the University of Alberta. 
+                </p>
+                <p> I develop websites, re-route communication and engage in research especially in 
+                    Artificial Intelligence. I love learning new things and tackling variety of problems. I have worked
+                in technological industries whereby I was actively engaged in Robotics and Cloud computing at its finest.</p>
+                <p> I hope you have fun engaging on my website.</p>
+            </div>
+
+            <img src ="port-folio.image/Profile2.jpg" alt=""  class ="about-me__img">
+        </section>
+
+        <!--My Work-->
+        <section class = "my-work" id = "work">
+            <h2 class="section__title">My Work</h2>
+            <p class = "section__subtitle"> A selection of my range of work (Click on any!)</p>
+
+            <!--First Portfolio-->
+            <div class = "portfolio" >
+                <a href = "Portfolio1-items.html" class = "portfolio__item">
+                    <img src = "port-folio.image/portfolio1.jpg" alt ="" class = "portfolio__img" >
+                </a>
+            
+                 <!--Second Portfolio-->
+                <a href = "Portfolio2-items.html" class = "portfolio__item">
+                    <img src = "port-folio.image/portfolio2.jpg" alt ="" class = "portfolio__img" >
+                </a>
+
+                <!--Third Portfolio-->
+                
+                <a href = "Portfolio3-items.html" class = "portfolio__item">
+                    <img src = "port-folio.image/portfolio3.jpg" alt ="" class = "portfolio__img" >
+                </a>
+                
+                <!--Fourth portfolio-->
+            
+                <a href = "Portfolio4-items.html" class = "portfolio__item">
+                    <img src = "port-folio.image/portfolio4.jpg" alt ="" class = "portfolio__img" >
+                </a>
+            
+                <!--Fifth portfolio
+            
+                <a href = "#" class = "portfolio__item">
+                    <img src = "portfolio5.jpg" alt ="" class = "portfolio__img" >
+                </a>
+            -->
+                <!--Sixth Portfolio
+        
+                <a href = "#" class = "portfolio__item">
+                    <img src = "portfolio6.jpg" alt ="" class = "portfolio__img" >
+                </a>
+            -->
+            </div>
+        </section>
+
+        <!--Footer-->
+        <!--Bringing social Icons into the Mix-->
+        <footer class = "footer">
+            <a href = "malito:ajaydrippin@gmail.com" class = "footer__link">ajaydrippin@gmail.com</a>
+            <ul class = "social-list">
+                <li class = "social-list__item">
+                    <a class = "social-list__link" href = https://github.com/ajaycmput">
+                        <i class="fab fa-github"></i>
+                </a>
+                </li>
+                <li class = "social-list__item">
+                    <a class = "social-list__link" href = "https://instagram.com/ajaydrippin">
+                        <i class="fab fa-instagram"></i>
+                </a>
+                </li>
+                <li class = "social-list__item">
+                    <a class = "social-list__link" href = "https://twitter.com/UTD_guardiola">
+                        <i class="fab fa-twitter"></i>
+                </a>
+                </li>
+                <li class = "social-list__item">
+                    <a class = "social-list__link" href = "https://www.linkedin.com/in/nnamdi-ajoku-38b793235/">
+                        <i class="fab fa-linkedin"></i>
+                </a>
+                </li>
+            </ul>
+        </footer>
+
+
+        <script src = "ajay's_web.js"></script> 
+
+    </body>
+    
+</html>

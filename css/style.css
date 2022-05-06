@@ -1,0 +1,509 @@
+*
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Custiom properties, update these for your own design */
+:root {
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rbga(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+}
+
+@media (min-width: 800px){
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* adds smooth scrolling when jumping to a section, works hand in hand with js */
+}
+
+/* General styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: Sem 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+
+}
+
+strong { font-weight: var(--fw-bold) }
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase; /* ensures all buttons are all capsized */
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    margin-bottom: 5em;
+}
+
+/* when hovering round the button */
+.btn:hover {
+    transform: scale(1.1); /*when hovering round the button it gets bigger and smaller */
+}
+/*Typography*/
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+/* Automatically adjusts when screen is tilted */
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.section__title {
+    margin-bottom: .25em;
+
+}
+.section__title--intro {
+    font-weight: var(--fw-reg); 
+}
+
+.section__title--intro strong{
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.nav {
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+
+}
+
+.nav__list {
+    list-style: none;
+    display: flex; /* makes items placed next to each other */
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2); /* size of the header */
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: .5em; /* gives us more room to click one esp. when using our hand */
+    background: transparent;
+    border: 0;
+    cursor: pointer; /* puts the hand icon when people hover around it */
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+ /* when nav.open is clicked, nav(navigation class moves to the right in full) */
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+/* when navigation bar is clicked, hamburger class */
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px); /* makes the X symbol */
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background:  var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+/* Intro Section */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 2em;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% * 1.5em);
+    }
+}
+
+/* My services section */
+
+.my-services {
+    /* if there is no bg image, change to color dark (default) */
+    background-color: var(--clr-dark);
+    background-image: url(services-b2-02.png);
+    /* make sure bg image never repeats itself */
+    background-size: cover;
+    /* helps darken the bg image a little bit, modify if you prefer latter */
+    background-blend-mode: multiply;
+    color: var(--clr-light); /* font color */
+    text-align: center;
+
+}
+
+.section__title--services {
+    color : var(--clr-accent);
+    position: relative;
+
+}
+
+/* creating a [white line] after the services section title */
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light); /* you can set it to current color instead of light */
+    opacity: 0.25;
+    
+
+}
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto; /* keeps each service centered */
+}
+
+/* media section helps with the window fitting */
+@media (min-width: 800px) {
+    .services {
+        display: flex; /* change the service section from horizontal to vertical when window is adjusted */
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto; 
+    
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+                "title img"
+                "subtitle img"
+                "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+
+    }
+
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px * 2em);
+    }
+    .about-me__img {
+        grid-column: 1 / -1;
+        grid-area: img;
+        box-shadow: var(--bs);
+        position: relative;
+        z-index: 2;
+        margin-top: 2em;
+    }
+}
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    
+}
+
+.portfolio {
+    display: grid;
+    /* auto-fittting each portolio on the my work grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    
+}
+
+.portfolio__item {
+    background: var(--clr-dark);
+    overflow: hidden; 
+
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img{
+    transform: scale(1.4);
+    opacity: .75;
+}
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+/* you can seperate footer color from footer link color */
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+
+ }
+
+ .footer__link {
+     font-weight: var(--fw-bold);
+ }
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;  /* because we do not want the bullets */
+    display: flex; /* put the socials next to each other */
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em; /* space each item wwith a width of .5em */
+}
+
+.social-list__link {
+    padding: .5em; /* so you can press on them well, eg with your hands when on mobile device */
+}
+
+/* my personal addition */
+.portfolio-social-list__link {
+    padding: .5em;
+    color: var(--clr-accent);
+    
+}
+
+.portfolio-social-list__link:hover {
+    opacity: .7;
+}
+.portfolio-social-list__item {
+    background: transparent;
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    list-style: none;  /* because we do not want the bullets */
+    display: flex; /* put the socials next to each other */
+    justify-content: center;
+    margin: .5em .5em;
+    font-size: var(--fs-h3);
+    padding: 0;
+    border-color: var(--clr-light);
+
+}
+
+/*  Individual portfolio item styles */
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual h3 {
+    text-align: center;
+}
+
+/* styling the paragraph in the portfolio-item class */
+.portfolio-item-individual p{
+    max-width: 600px;
+    margin-left: auto; /*adjust left & right margins automatically according to window resizing */
+    margin-right: auto;
+}
