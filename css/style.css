@@ -511,8 +511,9 @@ header {
 
 /* propersites of class "center"- for centering images */
 .center {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
