@@ -509,7 +509,7 @@ header {
     margin-right: auto;
 }
 
-/* propersites of class "center"- for centering images */
+/* propersites of class "center"- for centering images -> Created for portfolio6-details esp.*/
 .center {
     display: flex;
     flex-direction: column;
