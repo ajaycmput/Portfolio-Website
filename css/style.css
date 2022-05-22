@@ -524,12 +524,6 @@ header {
     width: 100%;
 }
 
-.move_text {
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-    transition-delay: 0.3s;
-    }
 
 /*
 
