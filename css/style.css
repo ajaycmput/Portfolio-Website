@@ -271,6 +271,7 @@ header {
         position: relative;
         z-index: 2;
         margin-bottom: 2em;
+        border-radius: 15px 50px 30px 5px;
     }
 
     .section__subtitle--intro {
