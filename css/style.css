@@ -290,7 +290,7 @@ header {
 .my-services {
     /* if there is no bg image, change to color dark (default) */
     background-color: var(--clr-dark);
-    background-image: url(services-b2-02.png);
+    background-image: url(background_img.webp);
     /* make sure bg image never repeats itself */
     background-size: cover;
     /* helps darken the bg image a little bit, modify if you prefer latter */
