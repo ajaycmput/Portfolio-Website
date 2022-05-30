@@ -323,8 +323,14 @@ header {
 }
 
 .service {
+
     max-width: 500px;
     margin: 0 auto; /* keeps each service centered */
+    transition: transform 300ms ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.2); /*when hovering round the service section it gets bigger and smaller */
 }
 
 /* media section helps with the window fitting */
