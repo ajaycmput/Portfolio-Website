@@ -337,13 +337,14 @@ header {
 @media (min-width: 800px) {
     .portfolio__img {
         height: 100%;
+        width: 100%;
     }
 
     .services {
         display: flex; /* change the service section from horizontal to vertical when window is adjusted */
         max-width: 1000px;
         margin-left: auto;
-        margin-right: auto; 
+        margin-right: auto;
     
     }
 
@@ -361,6 +362,7 @@ header {
 @media (min-width: 600px) {
     .portfolio__img {
         height: 100%;
+        width: 100%;
     }
     .about-me {
         display: grid;
