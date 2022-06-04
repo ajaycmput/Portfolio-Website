@@ -402,6 +402,14 @@ header {
     }
 }
 
+/* for very small devices (iphone 11) */
+@media(min-width: 300px) {
+    .portfolio__img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
