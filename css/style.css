@@ -408,6 +408,7 @@ header {
         height: 100%;
         width: 100%;
     }
+    
 }
 
 .my-work {
@@ -551,11 +552,6 @@ header {
     width: 75%;
 }
 
-@media(min-width: 300px) {
-    .pdf_display {
-        height: 100px;
-    }
-}
 
 /*
 
