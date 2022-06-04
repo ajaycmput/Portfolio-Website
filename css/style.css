@@ -335,6 +335,10 @@ header {
 
 /* media section helps with the window fitting */
 @media (min-width: 800px) {
+    .portfolio__img {
+        height: 100%;
+    }
+
     .services {
         display: flex; /* change the service section from horizontal to vertical when window is adjusted */
         max-width: 1000px;
@@ -355,6 +359,9 @@ header {
 
 
 @media (min-width: 600px) {
+    .portfolio__img {
+        height: 100%;
+    }
     .about-me {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -416,8 +423,9 @@ header {
 .portfolio__item {
     background: var(--clr-dark);
     overflow: hidden; 
-
+    
 }
+
 
 .portfolio__img {
     transition: 
