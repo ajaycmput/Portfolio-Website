@@ -338,6 +338,7 @@ header {
     .portfolio__img {
         height: 100%;
         width: 100%;
+        max-height: 250px;
     }
 
     .services {
@@ -425,6 +426,7 @@ header {
 .portfolio__item {
     background: var(--clr-dark);
     overflow: hidden; 
+    min-height: 228.39px;
     
 }
 
