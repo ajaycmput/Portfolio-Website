@@ -551,12 +551,11 @@ header {
     width: 75%;
 }
 
-
-/* this is for inserting PDFs */
-.container {
-    padding: 30px;
+@media(min-width: 300px) {
+    .pdf_display {
+        height: 100px;
+    }
 }
-
 
 /*
 
