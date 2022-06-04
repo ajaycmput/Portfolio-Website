@@ -552,6 +552,12 @@ header {
 }
 
 
+/* this is for inserting PDFs */
+.container {
+    padding: 30px;
+}
+
+
 /*
 
 
