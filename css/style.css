@@ -103,24 +103,20 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 .section__title {
-    margin-bottom: .25em;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
 
 }
-.section__title--intro {
+.section__title--intros {
     font-weight: var(--fw-reg); 
 }
 
-.section__title--intro strong{
+.section__title--intros strong{
     display: block;
 }
 
-.section__subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
-}
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--intro {
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -247,14 +243,36 @@ header {
 
 /* Intro Section */
 
-.intro {
+/* intro for index.html */
+.intros {
     position: relative;
 }
 
+/*intro for portfolios */
+.intro {
+    position: relative;  
+}
+
+/* for index.html */
+.intro__imgs {
+    box-shadow: var(--bs);
+}
+
+/* for portfolios */
 .intro__img {
     box-shadow: var(--bs);
 }
+
 @media (min-width: 600px) {
+    /* for index.html */
+    .intros {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        margin-left: 2rem ;
+        
+    }
+    /* for portfolios */
     .intro {
         display: grid;
         width: min-content;
@@ -266,6 +284,16 @@ header {
         grid-template-columns: min-content max-content;
     }
 
+    /* for index.html */
+    .intro__imgs{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2em;
+        align-items: flex-start;
+    }
+
+    /* for portfolios */
     .intro__img {
         grid-area: img;
         min-width: 250px;
@@ -275,6 +303,7 @@ header {
         border-radius: 15px 50px 30px 5px;
     }
 
+    /* for portfolios */
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1/1;
@@ -284,6 +313,8 @@ header {
         left: -1.5em;
         width: calc(100% * 1.5em);
     }
+
+
 }
 
 /* My services section */
@@ -376,21 +407,7 @@ header {
         grid-column-gap: 2em;
     }
 
-    .section__title--about {
-        grid-area: title;
 
-    }
-
-
-    .section__subtitle--about {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px * 2em);
-    }
     .about-me__img {
         grid-column: 1 / -1;
         grid-area: img;
@@ -399,6 +416,11 @@ header {
         z-index: 2;
         margin-top: 2em;
         border-radius: 30%;
+    }
+    
+    .intros {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -411,16 +433,26 @@ header {
     
 }
 
+@media(max-width: 550px) {
+    .intros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1.3rem;
+        margin-right: 1.3rem;
+    }
+}
+
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-vision);
+    color: var(--clr-vision);
     text-align: center;
     
 }
 
 .my-work h2{
-    background-color: var(--clr-dark);
-    color: var(--clr-accent);
+    background-color: var(--clr-vision);
+    color: var(--clr-dark);
     text-align: center;
     
 }
