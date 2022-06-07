@@ -419,21 +419,23 @@ header {
 .info__text {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .info__img {
-    flex-shrink: 0; 
+    width: 100%;
+     
 }
 
 .info__img img {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 0 auto;
 }
 
 .info__text h2 {
-    margin: 4rem;
+    margin-top: 1rem;
     padding: 1rem;
+    font-size: var(--fs-h3);
 }
 
 /* media section helps with the window fitting */
@@ -509,13 +511,22 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 1.3rem;
-        margin-right: 1.3rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .info__text {
         display: flex;
         flex-direction: column;
+    }
+
+    .info__img {
+        margin: 0 auto;
+    }
+
+    .info__text h2 {
+        font-size: var(--fs-h3);
+        margin: 0 auto;
     }
     .new__info {
         display: flex;
