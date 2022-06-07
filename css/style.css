@@ -116,16 +116,17 @@ h3 { font-size: var(--fs-h3) }
     animation: slide-in 1000ms;
     animation-timing-function: linear;
     background-color: var(--clr-cyberpunk);
-    border-radius: 25px;
+    border-radius: 25PX;
     padding: 1rem;
+    
 }
-
 
 .section__title--info {
     background-color: var(--clr-vision);
+    border-radius: 25px;
     animation: slide-in 1000ms;
     animation-timing-function: linear;
-    border-radius: 25px;
+
 }
 
 @keyframes slide-in {
@@ -142,6 +143,13 @@ h3 { font-size: var(--fs-h3) }
     background-color: var(--clr-accent);
 }
 
+
+.section__subtitle--intro {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
 
 .section__subtitle--work {
     color: var(--clr-accent);
@@ -287,7 +295,7 @@ header {
     /* for index.html */
     .intros {
         display: flex;
-        flex: 1;
+        flex: 2;
         flex-direction: row;
         margin: 0 auto;
         
@@ -307,8 +315,8 @@ header {
     /* for index.html */
     .intro__imgs{
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: block;
+        flex-direction: row;
         margin-left: auto; /* moves image to the left */
         animation:
             bounce 300ms
