@@ -528,7 +528,10 @@ header {
     }
 
     .info__img {
-        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 0 auto;
+        margin-right: 0 auto;
+        margin-left: 0 auto;
     }
 
     .info__text h2 {
