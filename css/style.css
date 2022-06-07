@@ -17,6 +17,8 @@
     --clr-dark: #303030;
     --clr-accent: #15bcda;
     --clr-vision: #C5C6C7;
+    --clr-cyberpunk: #8D8980;
+    
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -52,7 +54,7 @@ body {
 }
 
 section {
-    padding: Sem 2em;
+    padding: 3em 2em;
 }
 
 img {
@@ -107,12 +109,32 @@ h3 { font-size: var(--fs-h3) }
     margin-bottom: 0.75rem;
 
 }
+
 .section__title--intros {
-    font-weight: var(--fw-reg); 
+    font-weight: var(--fw-reg);
+    text-align: left;
+    animation: slide-in 1000ms;
+    animation-timing-function: linear;
+    background-color: var(--clr-cyberpunk);
+    border-radius: 25PX;
+    padding-left: 2rem;
+    margin-right: .75rem;
+    margin-bottom: 1rem;
+    
 }
 
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
 .section__title--intros strong{
-    display: block;
+    background-color: var(--clr-accent);
 }
 
 
@@ -267,9 +289,9 @@ header {
     /* for index.html */
     .intros {
         display: flex;
-        flex: 1;
+        flex: 2;
         flex-direction: row;
-        margin-left: 2rem ;
+        margin: 0 auto;
         
     }
     /* for portfolios */
@@ -287,10 +309,13 @@ header {
     /* for index.html */
     .intro__imgs{
         position: relative;
-        display: flex;
+        display: block;
         flex-direction: row;
-        margin-bottom: 2em;
-        align-items: flex-start;
+        margin-left: auto; /* moves image to the left */
+        animation:
+            bounce 300ms
+            alternate infinite
+            cubic-bezier(.2, .65, .6, 1);
     }
 
     /* for portfolios */
@@ -315,6 +340,19 @@ header {
     }
 
 
+    
+
+
+}
+
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
 }
 
 /* My services section */
@@ -363,6 +401,39 @@ header {
 
 .service:hover {
     transform: scale(1.2); /*when hovering round the service section it gets bigger and smaller */
+}
+
+/* info section */
+
+.new__info {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-bottom: 2rem;
+    background-color: var(--clr-dark);
+    background-image: url(Climate-thunder.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.info__text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.info__img {
+    flex-shrink: 0; 
+}
+
+.info__img img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info__text h2 {
+    margin: 4rem;
+    padding: 1rem;
 }
 
 /* media section helps with the window fitting */
@@ -433,13 +504,26 @@ header {
     
 }
 
-@media(max-width: 550px) {
+@media(max-width: 590px) {
     .intros {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 1.3rem;
         margin-right: 1.3rem;
+    }
+
+    .info__text {
+        display: flex;
+        flex-direction: column;
+    }
+    .new__info {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: var(--clr-dark);
+        margin: 0 auto;
     }
 }
 
@@ -585,105 +669,4 @@ header {
 }
 
 
-/*
 
-
-  .box {
-    position: relative;
-    width: 300px;
-    height: 300px;
-  }
-  .box-contents {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: url(Profile1.jpg) 50% 50% / cover no-repeat;
-      box-shadow: 0 0 50px rgba(0, 0, 0, .3);
-      transition: .5s ease;
-      width: 100%;
-    }
-  */
-
-/* hovering for the intro image
-  .hover-point {
-    position: absolute;
-    z-index: 2;
-    width: calc(100% / 3);
-    height: calc(100% / 3);
-  }
-  .hover-point:nth-child(1) {
-    top: 0;
-    left: 0;
-  }
-  .hover-point:nth-child(2) {
-    top: 0;
-    left: calc(100% / 3);
-  }
-  .hover-point:nth-child(3) {
-    top: 0;
-    right: 0;
-  }
-  .hover-point:nth-child(4) {
-    top: calc(100% / 3);
-    left: 0;
-  }
-  .hover-point:nth-child(5) {
-    top: calc(100% / 3);
-    right: 0;
-  }
-  .hover-point:nth-child(6) {
-    bottom: 0;
-    left: 0;
-  }
-  .hover-point:nth-child(7) {
-    bottom: 0;
-    left: calc(100% / 3);
-  }
-  .hover-point:nth-child(8) {
-    bottom: 0;
-    right: 0;
-  }
-  .hover-point:nth-child(1):hover ~ .box-contents {
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, .3);
-    transform-origin: right top;
-    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
-  }
-  .hover-point:nth-child(2):hover ~ .box-contents {
-    box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
-    transform-origin: center top;
-    transform: perspective(1000px) rotateX(10deg);
-  }
-  .hover-point:nth-child(3):hover ~ .box-contents {
-    box-shadow: -15px 15px 50px rgba(0, 0, 0, .3);
-    transform-origin: left top;
-    transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
-  }
-  .hover-point:nth-child(4):hover ~ .box-contents {
-    box-shadow: 15px 5px 50px rgba(0, 0, 0, .3);
-    transform-origin: left center;
-    transform: perspective(1000px) rotateY(-10deg);
-  }
-  .hover-point:nth-child(5):hover ~ .box-contents {
-    box-shadow: -15px 5px 50px rgba(0, 0, 0, .3);
-    transform-origin: right center;
-    transform: perspective(1000px) rotateY(10deg);
-  }
-  .hover-point:nth-child(6):hover ~ .box-contents {
-    box-shadow: 15px -15px 50px rgba(0, 0, 0, .3);
-    transform-origin: right bottom;
-    transform: perspective(1000px) rotateX(-10deg) rotateY(-10deg) rotateZ(-2deg);
-  }
-  .hover-point:nth-child(7):hover ~ .box-contents {
-    box-shadow: 0 -15px 50px rgba(0, 0, 0, .3);
-    transform-origin: center bottom;
-    transform: perspective(1000px) rotateX(-10deg);
-  }
-  .hover-point:nth-child(8):hover ~ .box-contents {
-    box-shadow: -15px -15px 50px rgba(0, 0, 0, .3);
-    transform-origin: left bottom;
-    transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
-  }
-
-  */
