@@ -285,6 +285,8 @@ header {
 /* for index.html */
 .intro__imgs {
     box-shadow: var(--bs);
+    width: auto;
+    height: 250px;
 }
 
 /* for portfolios */
@@ -296,10 +298,9 @@ header {
     /* for index.html */
     .intros {
         display: flex;
-        flex: 2;
+        flex: 1;
         flex-direction: row;
         margin: 0 auto;
-        
     }
     /* for portfolios */
     .intro {
@@ -520,6 +521,10 @@ header {
         align-items: center;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .section__title--intros {
+        font-size: var(--fs-h3);
     }
 
     .info__text {
