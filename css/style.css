@@ -118,6 +118,7 @@ h3 { font-size: var(--fs-h3) }
     background-color: var(--clr-cyberpunk);
     border-radius: 25PX;
     padding: 1rem;
+    margin: 1rem;
     
 }
 
