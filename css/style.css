@@ -320,10 +320,6 @@ header {
         display: block;
         flex-direction: row;
         margin-left: auto; /* moves image to the left */
-        animation:
-            bounce 300ms
-            alternate infinite
-            cubic-bezier(.2, .65, .6, 1);
     }
 
     /* for portfolios */
@@ -351,16 +347,6 @@ header {
     
 
 
-}
-
-
-@keyframes bounce {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-20px);
-    }
 }
 
 /* My services section */
