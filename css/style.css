@@ -205,7 +205,7 @@ header {
     text-decoration: none;
 }
 
-.nav_link:hover {
+.nav__link:hover {
     color: var(--clr-accent);
 }
 
