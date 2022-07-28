@@ -175,6 +175,7 @@ header {
     position: fixed;
     background: var(--clr-dark);
     background-image: url(nav-imgs.jpg);  /* nav-bar background image */
+    background-size: cover;
     color: var(--clr-light);  /* color */
     top: 0;
     bottom: 0;
