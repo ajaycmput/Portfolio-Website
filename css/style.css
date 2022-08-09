@@ -583,48 +583,77 @@ header {
     opacity: .75;
 }
 
+
 .footer {
+    position: relative;
     background: #111;
-    color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
 }
-/* you can seperate footer color from footer link color */
-.footer a { 
-    color: inherit;
-    text-decoration: none;
 
- }
-
- .footer__link {
-     font-weight: var(--fw-bold);
- }
-
-.footer__link:hover,
-.social-list__link:hover {
-    opacity: .7;
-}
-
-.footer__link:hover {
-    text-decoration: underline;
-}
-
-.social-list {
-    list-style: none;  /* because we do not want the bullets */
-    display: flex; /* put the socials next to each other */
-    justify-content: center;
-    margin: 2em 0 0;
+.social-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
 }
 
-.social-list__item {
-    margin: 0 .5em; /* space each item wwith a width of .5em */
+.social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
 }
 
-.social-list__link {
-    padding: .5em; /* so you can press on them well, eg with your hands when on mobile device */
+.social-menu ul li .fa {
+    font-size: var(--fs-h3);;
+    line-height: 45px;
+    transition: .6s;
+    color: #000;
 }
+
+.social-menu ul li .fa:hover {
+    color: var(--clr-light);
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: var(--clr-light);
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0,-10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #4C75A3;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #E4405F;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #1DA1F2;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #0A66C2;
+}
+
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #F57D00;
+}
+
 
 /* my personal addition */
 .portfolio-social-list__link {
