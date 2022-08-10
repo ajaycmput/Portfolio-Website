@@ -183,7 +183,7 @@ header {
     right: 0;
     z-index: 100;
 
-    transform: translateX(100%);
+    transform: translateY(100%);  /* bottom to top */
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 
 }
