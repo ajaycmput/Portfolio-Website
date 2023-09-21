@@ -10,6 +10,8 @@
         href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin = "anonymous" />
 
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <!-- Bootstrap font-awesome-->
         <link href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel = "stylesheet">
@@ -43,14 +45,26 @@
 
         </header>
 
-        <!--Introduction-->
-        <div class = "intros" id="home">
-            <h2 class= "section__title section__title--intros">
-                "Hey there, I'm <strong>Nnamdi.</strong>
-                I design, develop & deploy."
-            </h2>
-            <img src = "port-folio.image/bitmoji-hi.png" alt="" class="intro__imgs" />
+        <!-- Introduction -->
+<section class="intros text-center py-1" id="home">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <img src="port-folio.image/bitmoji-hi.png" alt="Your Avatar" class="img-fluid rounded-circle mb-3">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-4">Building the Future, One Line of Code at a Time.</h1>
+                <p class="lead">I'm Nnamdi, your go-to software engineer.</p>
+                <div class="intro-icons">
+                    <a href="#services" class="btn btn-dark btn-lg">Explore</a>
+                    <a href="https://github.com/ajaycmput" target="_blank" class="btn btn-dark btn-lg"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nnamdi-ajoku-38b793235/" target="_blank" class="btn btn-dark btn-lg"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+
 
         <!--My Services-->
         <section class ="my-services" id = "services">
@@ -81,7 +95,7 @@
 
         <!--About Me-->
         <section class ="about-me" id ="about">
-            <h2 class = "section__title section__title--about"> <strong> About </strong></h2>
+            <h2 class = "section__title section__title--about"> About </h2>
             
 
             <div class ="about-me__body">
@@ -96,18 +110,6 @@
             <img src ="port-folio.image/Profile2s.jpg" alt=""  class ="about-me__img">
         </section>
 
-        <section class = "new__info" id = "info">
-            <div class ="info__img">
-                <img src = "port-folio.image/Climate-rainfall.png" alt="" >
-            </div>
-            <div class = "info__text">
-                <h2 class = "section__title section__title--info">
-                    "Building modern Microservices and delivering them
-                    through modern API methods"
-                </h2>
-            </div>
-        </section>
-        
         <!--My Work-->
         <section class = "my-work" id = "work">
             <h2 class="section__title" >
@@ -162,6 +164,74 @@
                     <img src = "port-folio.image/portfolio8_mywork.jpg" alt ="" class = "portfolio__img" >
                 </a>
 
+            </div>
+        </section>
+
+        <!-- Internships Section -->
+        <section class="internships" id="internships">
+            <h2 class="section__title section__title--internships">Places I've Interned At</h2>
+            <div class="container internships-container">
+                <div class="row">
+                    <!-- Internship Card 1 -->
+                    <div class="col-md-4 internship-card">
+                        <div class="card">
+                            <img src="css/logos/internship_goa.png" class="card-img-top" alt="Company Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">Government of Alberta</h5>
+                                <p class="card-text">Integration Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Internship Card 2 -->
+                    <div class="col-md-4 internship-card">
+                        <div class="card">
+                            <img src="css/logos/internship_ansys.webp" class="card-img-top" alt="Company Logo">
+                            <div class="card-body">
+                                <h5 class="card-title">Ansys</h5>
+                                <p class="card-text">Software engineerging Intern</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations" id="recommendations">
+            <h2 class="section__title section__title--recommendations">Recommendations</h2>
+            <div class="container recommendations-container">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 recommendation-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- add image here if you want to -->
+                                <p class="card-text">"Nnamdi, I am not surprised at all to hear that other organizations want you on their teams. I know you will be successful!!"</p>
+                                <footer class="blockquote-footer">Lisa (GOA)</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4 recommendation-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Nnamdi excels in project organization and delivery. He's clearly management material and a standout intern in software engineering."</p>
+                                <footer class="blockquote-footer">Karan B. (Ansys)</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4 recommendation-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">"Nnamdi consistently delivers high-quality code ahead of schedule. A truly invaluable member of our team."</p>
+                                <footer class="blockquote-footer"> Chukwukere </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
             </div>
         </section>
 
