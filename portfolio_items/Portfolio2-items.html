@@ -9,7 +9,6 @@
         <link rel = "stylesheet"
         href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity = "sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin = "anonymous" />
-
         <!-- Bootstrap font-awesome-->
         <link href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel = "stylesheet">
@@ -18,10 +17,10 @@
         display=swap" rel = "stylesheet">
 
         <!--Linking my html webpage to css-->
-        <link rel ="stylesheet" href = "css/style.css">
+        <link rel ="stylesheet" href = "../css/style.css">
 
     </head>
-    <body >
+    <body>
         <header>
             <!--Logo is basically a section that only takes the profile pic.-->
             <div class = "logo">
@@ -46,29 +45,33 @@
         
         <section class = "intro">
             <h1 class = "section__title section__title--intro">
-                Stock <strong> API </strong>
+                Navigation <strong> System </strong>
             </h1>
-            <p class = "section__subtitle section__subtitle--intro"> Hackathan 2021 Contest</p>
-            <img src = "port-folio.image/portfolio1.jpg" alt = ""  class ="intro__img">
+            <p class = "section__subtitle section__subtitle--intro"> Satellite tracking system </p>
+            <img src = "port-folio.image/portfolio2.jpg" alt = ""  class ="intro__img">
         </section>
 
         <div class = "portfolio-item-individual">
             <p></p>
             
             <h3><strong> Overview</strong></h3>
-            <p>Stock API is a stock forcasting program designed with python by me and my team (Goobers) for the 
-                Novermber 2021 Hackathon Contest. This program is intended to help make better decisions on whether
-                 to buy or sell the stocks the next day or so, based on the simple moving average models.
+            <p> I developed a Navigation System as part of my 275 CMPUT course at the University of Alberta.     This project involved creating a client-server model that allows users to select start and end points on a map of Edmonton and displays the shortest route between these points.
             </p>
-            <img src = "port-folio.image/portfolio1-details.jpg" alt = "">
-            <p>This project was Inspired by data forecasting algorithms and was aided by libraries from matplotlib
-                 and pandas along with data structure and some conditional statements.
+            <p>The client was implemented using Python, while the server was implemented using C++. The route information was computed by the server and returned to a plotter program, which displayed the route as line segments overlaid on the original map..
             </p>
-            <p> This can perhaps be a building block in creating future forecasting models for stock.</p>
+
+            <p>
+            This Navigation System serves as a practical example of a client-server application that uses interprocess communication (IPC) to solve a complex problem. It has the potential to serve as a foundation for the development of more advanced and precise navigation systems.
+            </p>
+
+            <img src = "port-folio.image/portfolio2-details.webp" alt = "">
+            <p>
+                My Teaching Assistant, Tianyu Zhang, was responsible for developing the client-side of this project using Python, while I focused on the server-side implementation using C++. Together, we created a functional Navigation System that demonstrates the use of interprocess communication (IPC) in a client-server application. This project has the potential to serve as a foundation for the development of more advanced and precise navigation systems in the future. All credits and rights for this project are reserved.
+            </p>
 
             <h3> Check it Out</h3>
             <li class = "portfolio-social-list__item">
-            <a class = "portfolio-social-list__link" href = https://github.com/arongu321/Goobers>
+            <a class = "portfolio-social-list__link" href = "https://github.com/ajaycmput/Tangible_Computing-Projects">
                 <i class="fab fa-github"></i>
             </a>
             </li>
