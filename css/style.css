@@ -202,6 +202,7 @@ header {
 
 .nav__link:hover {
     color: var(--clr-accent);
+    text-decoration: none;
 }
 
 .nav-toggle {
@@ -271,17 +272,26 @@ header {
 }
 
 .recommendations-container {
-    background-image: url('recommendations.png');
+    background-color: #000000;
     background-size: cover;
     background-position: center;
 
     background-blend-mode: multiply;
     color:var(--clr-dark);
     text-align: center;
+    transition: transform .2s ease-in-out;
+}
+
+.recommendations-container:hover {
+    transform: translateY(-10px);
 }
 
 .internships-container, .recommendations-container {
     padding: 50px;
+}
+
+.my-work-container {
+    padding: 20px;
 }
 
 .internship-card, .recommendation-card {
@@ -289,13 +299,18 @@ header {
 }
 
 .internships-container {
-    background-image: url('download.jpeg');
+    background-color: #000000;
     background-size: cover;
     background-position: center;
 
     background-blend-mode: multiply;
     color:var(--clr-dark);
     text-align: center;
+    transition: transform .2s ease-in-out;
+}
+
+.internships-container:hover {
+    transform: translateY(-10px);
 }
 
 .card {
@@ -476,18 +491,16 @@ header {
     }
 
 }
-
-.my-work {
-    background-color: var(--clr-vision);
-    color: var(--clr-vision);
-    text-align: center;
-    
+/* ------------------------------------------- */
+.my-work-container {
+    background-color: #000000;
+    transition: transform .2s ease-in-out;
 }
 
-.my-work-card {
-    background-image: url(my_work_bg_img.avif);
-    background-size: cover;
+.my-work-container:hover {
+    transform: translateY(-10px);
 }
+
 .my-work h2{
     background-color: var(--clr-vision);
     color: var(--clr-dark);
@@ -551,7 +564,7 @@ header {
 .social-menu ul li .fa {
     font-size: var(--fs-h3);;
     line-height: 45px;
-    transition: .6s;
+    transition: .2s;
     color: #000;
 }
 
@@ -567,7 +580,7 @@ header {
     border-radius: 50px;
     background-color: var(--clr-light);
     text-align: center;
-    transition: .6s;
+    transition: .2s;
     box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }
 
