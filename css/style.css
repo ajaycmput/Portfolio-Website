@@ -331,6 +331,27 @@ header {
     height: 224.66px;
 }
 
+/* About me section */
+.profile-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-description {
+    padding: 20px;
+}
+
+.profile-description h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.profile-description p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
 /* for portfolios */
 .intro__img {
     box-shadow: var(--bs);
@@ -442,34 +463,7 @@ header {
     }
 }
 
-.about-me {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
-@media (min-width: 600px) {
-    .about-me {
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas: 
-                "title img"
-                "subtitle img"
-                "text img";
-        grid-column-gap: 2em;
-    }
-
-
-    .about-me__img {
-        grid-column: 1 / -1;
-        grid-area: img;
-        box-shadow: var(--bs);
-        position: relative;
-        z-index: 2;
-        margin-top: 2em;
-        border-radius: 30%;
-    }
-    
+@media (min-width: 600px) { 
     .intros {
         margin-left: 1rem;
         margin-right: 1rem;
