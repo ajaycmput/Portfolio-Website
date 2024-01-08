@@ -334,8 +334,8 @@ header {
 .profile-card {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 85%; /* Control the maximum width of the card */
+    width: 75%;
+    max-width: 75%; /* Control the maximum width of the card */
     position: relative; /* Positioning context for the image */
     overflow: hidden; /* Hide any overflowing parts */
 }
@@ -344,8 +344,7 @@ header {
     width: 100%; /* Image takes full width of the card */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline spacing */
-    margin-left: auto; /* Center-align the image *x/
-    margin-right: auto; /* Center-align the image */
+    margin-left: auto; /* Center-align the image */
 }
 
 .profile-description {
